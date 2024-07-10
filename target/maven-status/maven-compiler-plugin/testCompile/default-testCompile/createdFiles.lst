@@ -1,0 +1,6 @@
+pages\PayRentObject.class
+utils\Base.class
+stepdefinitions\PayRentStepDefinition.class
+uistore\payRentLocators.class
+runner\RunTest.class
+com\bdd_v2\AppTest.class
