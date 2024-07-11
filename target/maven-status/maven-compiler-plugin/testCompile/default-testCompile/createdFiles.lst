@@ -1,6 +1,8 @@
+ClosePopupHandler.class
 pages\PayRentObject.class
 utils\Base.class
 stepdefinitions\PayRentStepDefinition.class
 uistore\payRentLocators.class
 runner\RunTest.class
+ClosePopupHandler$1.class
 com\bdd_v2\AppTest.class

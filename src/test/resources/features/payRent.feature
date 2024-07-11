@@ -31,3 +31,13 @@ Feature: Tp Validate the pay Rent page in the No Broker Application
     And update username
     And click on save profile
     Then verify whether the pop up about updation is successful or not
+
+  Scenario Outline: to validate the valid email or not.
+    Given user needs to be on the profile page
+    When user enters invalid "<Email>"
+    And click on the save profile.
+    Then verify the warning message.
+
+    Examples: 
+      | Email           |
+      | dummy@gmail|

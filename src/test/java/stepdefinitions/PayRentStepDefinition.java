@@ -13,7 +13,7 @@ import utils.Base;
 public class PayRentStepDefinition {
 
 	Base base = new Base();
-	WebDriver driver;
+	public static WebDriver driver;
 	PayRentObject payRentObject = new PayRentObject();
 
 	@Given("^user needs to be on home page$")
@@ -29,6 +29,7 @@ public class PayRentStepDefinition {
 	@When("^user click on pay rent button$")
 	public void user_click_on_pay_rent_button() {
 		payRentObject.clickOnPayRent(driver);
+
 	}
 
 	@Then("^it navigates to pay rent page$")
@@ -118,4 +119,25 @@ public class PayRentStepDefinition {
 	public void verify_whether_the_pop_up_about_updation_is_successful_or_not() throws InterruptedException {
 		payRentObject.verifyUpdateUserName(driver);
 	}
+
+	@Given("user needs to be on the profile page")
+	public void user_needs_to_be_on_the_profile_page() {
+		driver=Base.driver;
+	}
+
+	@When("user enters invalid {string}")
+	public void user_enters_invalid(String string) {
+		payRentObject.updateEmail(driver,string);
+	}
+
+	@When("click on the save profile.")
+	public void click_on_the_save_profile() throws InterruptedException {
+		payRentObject.clickSaveBtn(driver);
+	}
+
+	@Then("verify the warning message.")
+	public void verify_the_warning_message() {
+		payRentObject.verifValidEmail(driver);
+	}
+
 }

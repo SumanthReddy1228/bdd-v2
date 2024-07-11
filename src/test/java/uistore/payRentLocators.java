@@ -19,7 +19,15 @@ public class payRentLocators {
 	private By updateUserName=By.xpath("//input[@id=\"nameText\"]");
 	private By saveBtn=By.xpath("//button[@id=\"saveProfile\"]");
 	private By useNameVerify=By.xpath("//div[@controlid=\"nameText\"]");
+	private By emailUpdate=By.xpath("//input[@id=\"emailText\"]");
+	private By enterValidMail=By.xpath("//div[@controlid=\"emailText\"]//span[@class=\"help-block\"]");
 			
+	public By getEmailUpdate() {
+		return emailUpdate;
+	}
+	public By getEnterValidMail() {
+		return enterValidMail;
+	}
 	public By getUseNameVerify() {
 		return useNameVerify;
 	}
