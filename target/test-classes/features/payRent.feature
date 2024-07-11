@@ -23,4 +23,11 @@ Feature: Tp Validate the pay Rent page in the No Broker Application
 
     Examples: 
       | Email           |
-      | dummy@gmail.com |  
+      | dummy@gmail.com |
+
+  Scenario: to validate whether profile data is updating or not.
+    Given user needs to be on profile page.
+    When user hovers and click on user profile
+    And update username
+    And click on save profile
+    Then verify whether the pop up about updation is successful or not
