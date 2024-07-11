@@ -57,5 +57,40 @@ public class PayRentStepDefinition {
 	public void value_should_be_selected() {
 		payRentObject.verifyPaymentType(driver);
 	}
+	
+	@When("user enter the username")
+	public void user_enter_the_username() throws InterruptedException {
+		payRentObject.enterUserName(driver);
+	}
+
+	@When("user enter the phone number")
+	public void user_enter_the_phone_number() throws InterruptedException {
+		payRentObject.enterPhoneNumber(driver);
+	}
+
+	@When("user enter {string}")
+	public void user_enter(String string) throws InterruptedException {
+		payRentObject.enterEmail(driver, string);
+	}
+
+	@When("click on check box")
+	public void click_on_check_box() throws InterruptedException {
+		payRentObject.clikCheckBox(driver);
+	}
+
+	@When("click on get started button")
+	public void click_on_get_started_button() throws InterruptedException {
+		payRentObject.clickGetStarted(driver);
+	}
+
+	@When("click on verify button")
+	public void click_on_verify_button() {
+		
+	}
+
+	@Then("it need to be logged in")
+	public void it_need_to_be_logged_in() {
+	}
+
 
 }
